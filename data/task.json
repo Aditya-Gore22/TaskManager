@@ -1,0 +1,22 @@
+[
+  {
+    "id": "c4809a64-3e52-41c0-99e1-edc6b667ae71",
+    "userId": "019cad8a-186f-766e-b807-639e3cf87cd1",
+    "title": "Aditya task",
+    "description": "Task Description",
+    "status": "Pending",
+    "priority": "low",
+    "dueDate": "02/03/2026",
+    "createdAt": "2026-03-03T05:42:36.329Z"
+  },
+  {
+    "id": "05f8e828-e00e-412c-9a1f-64125bb17cbe",
+    "userId": "019cb237-ad9e-709b-b6ac-23e8dcec7a07",
+    "title": "harshad task",
+    "description": "Task Description",
+    "status": "completed",
+    "priority": "medium",
+    "dueDate": "02/03/2026",
+    "createdAt": "2026-03-03T05:46:49.741Z"
+  }
+]

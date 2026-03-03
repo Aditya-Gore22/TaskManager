@@ -1,0 +1,26 @@
+[
+  {
+    "id": "019cad8a-186f-766e-b807-639e3cf87cd1",
+    "name": "adi d",
+    "userName": "adid1",
+    "email": "adid@123.com",
+    "password": "$2b$10$IZbOeyuglMrLXfEiYOTTsuvxff4iDDi1qj7nV4uNNfuVSNT6qfI1G",
+    "createdAt": "2026-03-02T07:53:54.601Z",
+    "updatedAt": "2026-03-02T07:53:54.602Z",
+    "isActive": true,
+    "isDeleted": false,
+    "deletedAt": null
+  },
+  {
+    "id": "019cb237-ad9e-709b-b6ac-23e8dcec7a07",
+    "name": "harshad",
+    "userName": "harshad",
+    "email": "harshad@ex.com",
+    "password": "$2b$10$JfYidKYnTSmr00ARtA9dZO4Vb2CEr8l1gwkVKsXgWGyibW5flsaGq",
+    "createdAt": "2026-03-03T05:41:59.476Z",
+    "updatedAt": "2026-03-03T05:41:59.476Z",
+    "isActive": true,
+    "isDeleted": false,
+    "deletedAt": null
+  }
+]
