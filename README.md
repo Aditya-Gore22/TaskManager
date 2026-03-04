@@ -1,6 +1,6 @@
 # TaskManager
 
-[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/Aditya-Gore22/TaskManager)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Aditya-Gore22/TaskManager)
 
 A simple and lightweight Task Management API built with Node.js and Express. This application allows users to register, log in, and manage their personal tasks through a set of RESTful endpoints. It uses JSON files for data persistence and JWT for securing routes.
 
