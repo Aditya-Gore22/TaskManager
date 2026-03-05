@@ -135,6 +135,33 @@ exports.updateTask = async (req, res) => {
 }
 
 //Delete by Id
+// exports.deleteTask = async (req, res) => {
+//     try {
+//     const id = req.params.id
+//     const uId = req.user.id
+    
+//     let data = await fs.readFile("./data/task.json", "utf-8");
+//     data=JSON.parse(data)
+//     let userTasks = data.filter(t => t.userId === uId);
+//     if (!userTasks || userTasks.length === 0) {
+//         return res.status(200).json({ status: false, message: "task not found" });
+//     }
+//     var removeIndex = userTasks.map(function (task) {
+//     return task.id;
+//     }).indexOf(id);
+//     if (removeIndex === -1) {
+//     return res.status(200).json({ status: false, message: "task not found" });;
+//     } else {
+//         userTasks.splice(removeIndex, 1);
+//         await fs.writeFile("./data/task.json", JSON.stringify(userTasks, null, 2));
+//         return res.json({ status: true, message: "task deleted successfully.", id: id });
+//     }
+//     }
+//     catch (err) {
+//         res.status(500).json({ status: false, message: "Server error", error: err.message });
+//     }
+// }
+
 exports.deleteTask = async (req, res) => {
     try {
     const id = req.params.id
@@ -142,20 +169,17 @@ exports.deleteTask = async (req, res) => {
     
     let data = await fs.readFile("./data/task.json", "utf-8");
     data=JSON.parse(data)
-    let userTasks = data.filter(t => t.userId === uId);
-    if (!userTasks || userTasks.length === 0) {
-        return res.status(200).json({ status: false, message: "task not found" });
-    }
-    var removeIndex = userTasks.map(function (task) {
-    return task.id;
-    }).indexOf(id);
-    if (removeIndex === -1) {
+
+    let removeIndex=data.findIndex(t=>t.id===id && t.userId===uId)
+    if(removeIndex===-1){
     return res.status(200).json({ status: false, message: "task not found" });;
-    } else {
-        userTasks.splice(removeIndex, 1);
-        await fs.writeFile("./data/task.json", JSON.stringify(userTasks, null, 2));
-        return res.json({ status: true, message: "task deleted successfully.", id: id });
     }
+    else{
+        data.splice(removeIndex,1)
+        await fs.writeFile("./data/task.json", JSON.stringify(data, null, 2));
+        return res.status(200).json({ status: true, message: "task deleted successfully.", id: id });
+    }
+
     }
     catch (err) {
         res.status(500).json({ status: false, message: "Server error", error: err.message });
